@@ -39,6 +39,14 @@ public class Course {
     public void setModules(ArrayList<Module> modules) {
         this.modules = modules;
     }
+    
+    public void addModule(Module m){
+        this.modules.add(m);
+    }
+    
+    public void removeModule(Module m){
+        this.modules.remove(m);
+    }
 
     public LocalDate getStartDate() {
         return startDate;

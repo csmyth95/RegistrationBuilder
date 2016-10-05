@@ -45,4 +45,12 @@ public class Module {
         this.students = students;
     }
     
+    public void addStudent(Student s){
+        this.students.add(s);
+    }
+    
+    public void removeStudent(Student s){
+        this.students.remove(s);
+    }
+    
 }
