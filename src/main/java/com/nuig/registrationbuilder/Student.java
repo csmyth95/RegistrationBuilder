@@ -1,10 +1,6 @@
 package com.nuig.registrationbuilder;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import org.joda.time.LocalDate;
 
 /**
  *
@@ -13,11 +9,11 @@ package com.nuig.registrationbuilder;
 public class Student {
     private String name;
     private int age;
-    private String dateOfBirth;
+    private LocalDate dateOfBirth;
     private long studentID;
     private static long idAllocator = 0;
     
-    public Student(String name, int age, String dob){
+    public Student(String name, int age, LocalDate dob){
         this.name = name;
         this.age = age;
         this.dateOfBirth = dob;
@@ -34,7 +30,7 @@ public class Student {
         return age;
     }
 
-    public String getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
@@ -54,7 +50,7 @@ public class Student {
         this.age = age;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 }

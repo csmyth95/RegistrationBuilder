@@ -12,7 +12,6 @@ import org.joda.time.LocalDate;
  * @author conor
  */
 public class Course {
-    //Course Name (CS & IT or ECE, etc), List of modules, Academic Start date and End dates
     private String name;
     private ArrayList<Module> modules;
     private LocalDate startDate;
@@ -22,6 +21,7 @@ public class Course {
         this.name = n;
         this.startDate = sD;
         this.endDate = eD;
+        this.modules = new ArrayList<>();
     }
 
     public String getName() {

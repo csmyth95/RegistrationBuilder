@@ -18,6 +18,7 @@ public class Module {
     public Module(String name, String id){
         this.name = name;
         this.moduleID = id;
+        this.students = new ArrayList<>();
     }
     
     public String getName() {
