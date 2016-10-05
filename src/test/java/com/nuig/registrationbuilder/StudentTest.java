@@ -11,6 +11,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.joda.time.LocalDate;
 
 /**
  *
@@ -43,7 +44,7 @@ public class StudentTest {
     @org.junit.Test
     public void testGetName() {
         System.out.println("getName");
-        Student instance = new Student("David", 18, "27/10/1995");
+        Student instance = new Student("David", 18, new LocalDate(1995,10,27));
         String expResult = "David";
         String result = instance.getName();
         assertEquals(expResult, result);
@@ -55,7 +56,7 @@ public class StudentTest {
     @org.junit.Test
     public void testGetAge() {
         System.out.println("getAge");
-        Student instance = new Student("David", 18, "27/10/1995");
+        Student instance = new Student("David", 18, new LocalDate(1995,10,27));
         int expResult = 18;
         int result = instance.getAge();
         assertEquals(expResult, result);
@@ -67,9 +68,9 @@ public class StudentTest {
     @org.junit.Test
     public void testGetDateOfBirth() {
         System.out.println("getDateOfBirth");
-        Student instance = new Student("David", 18, "27/10/1995");
-        String expResult = "27/10/1995";
-        String result = instance.getDateOfBirth();
+        Student instance = new Student("David", 18, new LocalDate(1995,10,27));
+        LocalDate expResult = new LocalDate(1995,10,27);
+        LocalDate result = instance.getDateOfBirth();
         assertEquals(expResult, result);
     }
 
@@ -79,7 +80,7 @@ public class StudentTest {
     @org.junit.Test
     public void testGetStudentID() {
         System.out.println("getStudentID");
-        Student instance = new Student("David", 18, "27/10/1995");
+        Student instance = new Student("David", 18, new LocalDate(1995,10,27));
         long expResult = 0L;
         long result = instance.getStudentID();
         assertEquals(expResult, result);
@@ -91,7 +92,7 @@ public class StudentTest {
     @org.junit.Test
     public void testGetUsername() {
         System.out.println("getUsername");
-        Student instance = new Student("David", 18, "27/10/1995");
+        Student instance = new Student("David", 18, new LocalDate(1995,10,27));
         String expResult = "David18";
         String result = instance.getUsername();
         assertEquals(expResult, result);
@@ -104,7 +105,8 @@ public class StudentTest {
     public void testSetName() {
         System.out.println("setName");
         String name = "Conor";
-        Student instance = new Student("David", 18, "27/10/1995");;
+        LocalDate dob = new LocalDate();
+        Student instance = new Student("David", 18, new LocalDate(1995,10,27));
         instance.setName(name);
     }
 
@@ -115,7 +117,7 @@ public class StudentTest {
     public void testSetAge() {
         System.out.println("setAge");
         int age = 24;
-        Student instance = new Student("David", 18, "27/10/1995");;
+        Student instance = new Student("David", 18, new LocalDate(1995,10,27));
         instance.setAge(age);
     }
 
@@ -125,8 +127,8 @@ public class StudentTest {
     @org.junit.Test
     public void testSetDateOfBirth() {
         System.out.println("setDateOfBirth");
-        String dateOfBirth = "28/06/1996";
-        Student instance = new Student("David", 18, "27/10/1995");;
+        LocalDate dateOfBirth = new LocalDate(1995,10,27);
+        Student instance = new Student("David", 18, new LocalDate(1995,10,27));
         instance.setDateOfBirth(dateOfBirth);
     }
     

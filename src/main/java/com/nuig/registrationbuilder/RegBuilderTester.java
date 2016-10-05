@@ -14,7 +14,7 @@ import org.joda.time.LocalDate;
 public class RegBuilderTester {
     public static void main(String[] args){
         System.out.println("Classes to create Student, Module & Course Objects");
-        Student conor = new Student("Conor Smyth", 20, new LocalDate("27/10/1995"));
+        Student conor = new Student("Conor Smyth", 20, new LocalDate(1995,10,27));
         System.out.println("Name of 1st student is: " + conor.getName());
     }
 }
